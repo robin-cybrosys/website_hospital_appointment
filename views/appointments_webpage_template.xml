@@ -30,7 +30,7 @@
 <!--                                                </span>-->
                                             </label>
                                             <div class="col-sm">
-                                                <select name="partner_id"
+                                                <select name="patient_id"
                                                         t-attf-class="form-control s_website_form_input"
                                                         required="1">
                                                     <t t-foreach="patients or []"

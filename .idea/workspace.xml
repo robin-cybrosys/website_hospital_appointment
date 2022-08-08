@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="website v1.1: after setting up template">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="website v1.2: function start" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659954306971</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="website v1.2: function start">
+      <created>1659957942259</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1659957942259</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +151,7 @@
     <MESSAGE value="website 01:unmodified" />
     <MESSAGE value="website v1:before template" />
     <MESSAGE value="website v1.1: after setting up template" />
-    <option name="LAST_COMMIT_MESSAGE" value="website v1.1: after setting up template" />
+    <MESSAGE value="website v1.2: function start" />
+    <option name="LAST_COMMIT_MESSAGE" value="website v1.2: function start" />
   </component>
 </project>
