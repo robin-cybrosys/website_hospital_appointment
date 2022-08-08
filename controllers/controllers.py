@@ -14,25 +14,25 @@ class WebsiteForm(http.Controller):
             "website_hospital_appointment.online_appointment_form", values)
 
 
-class WebsiteAccount(http.Controller):
-    @http.route(['/appointment_submit'], type='http', auth='public',
-                website=True)
-    def appointment_submit(self, **post):
-        patient_card = post['patient_id']
-        print(patient_card)
+# class WebsiteAccount(http.Controller):
+#     @http.route(['/appointment_submit'], type='http', auth='public',
+#                 website=True)
+#     def appointment_submit(self, **post):
+        # patient_card = post['patient_id']
+        # print(patient_card)
         # Put your backend operations here, e.g.
-        appointments = request.env['hospital.appointment'].sudo().search([])
-        appointments.create({
-            'patient_card_id': post.get('patient_id'),
+        # appointments = request.env['hospital.appointment'].sudo().search([])
+        # appointments.create({
+        # })
+        #     'patient_card_id': post.get('patient_id'),
             # 'patient_id': 'New',
-            'doctor_id': 21,
+            # 'doctor_id': 21,
             # patient_card = post['patient_id']
             # print(patient_card)
 
             # 'name': post.get('name'),
             # 'email': post.get('email'),
             # 'phone': post.get('phone')
-        })
         # vals = {
         #     'appointments': appointments,
         # }
