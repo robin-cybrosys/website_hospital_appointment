@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="website v1:before template">
+    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="website v1.1: after setting up template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/appointments_webpage_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointments_webpage_template.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659948218503</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="website v1.1: after setting up template">
+      <created>1659954306971</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659954306971</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -140,6 +145,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="website 01:unmodified" />
     <MESSAGE value="website v1:before template" />
-    <option name="LAST_COMMIT_MESSAGE" value="website v1:before template" />
+    <MESSAGE value="website v1.1: after setting up template" />
+    <option name="LAST_COMMIT_MESSAGE" value="website v1.1: after setting up template" />
   </component>
 </project>
