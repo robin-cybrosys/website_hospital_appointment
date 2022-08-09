@@ -22,11 +22,12 @@ class WebsiteForm(http.Controller):
     def appointment_submit(self, **post):
         patient = int(post['patient_id'])
         doctor = int(post['doctor_id'])
-        print(patient, doctor,post)
+        date = post.get('appointment_date')
+        print(patient, doctor, date)
         appointments = request.env['hospital.appointment'].sudo().search([])
         appointments.create({
-            # 'patient_id': patient,
             'patient_card_id': patient,
+            'date': date,
             'doctor_id': doctor,
         })
         vals = {
@@ -36,10 +37,18 @@ class WebsiteForm(http.Controller):
             "website_hospital_appointment.appointment_creation_success", vals)
 
         # create patient card if it's not existing
+
     @http.route(['/appointment/card/create'], type='http', auth='public',
-                    website=True)
+                website=True)
     def create_card(self):
         patient = request.env['res.partner'].sudo().search([])
+        # dob = patient.dob
+        # print(dob)
+        # patient_phone
+        # gender
+        # blood_group
+        # age
+
         # doctor_id = request.env['hr.employee'].sudo().search(
         #     [('job_id', '=', 'Doctor')])
         values = {}
@@ -50,6 +59,24 @@ class WebsiteForm(http.Controller):
         return request.render(
             "website_hospital_appointment.card_creation_form", values)
 
+    # card submit button
+    @http.route(['/appointment/card/submit'], type='http', auth='public',
+                website=True)
+    def appointment_card_submit(self, **post):
+        patient_card = int(post['partner_id'])
+        # print(patient, post)
+        card = request.env['hospital.management'].sudo().search([])
+        card.create({
+            # 'patient_id': patient,
+            'patient_id': patient_card,
+
+        })
+        vals = {
+            'card': card,
+        }
+        return request.render(
+            "website_hospital_appointment.card_creation_success",
+            vals)
 
         # # patient = int(post['patient_id'])
         # # print(patient, post)

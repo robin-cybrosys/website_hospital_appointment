@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="aug 9 v1.2: Appointment created, ongoing:patient card creation">
+    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="aug 9 v1.3: Appointment created, ongoing:patient card submit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/appointments_webpage_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointments_webpage_template.xml" afterDir="false" />
@@ -143,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660028128171</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="aug 9 v1.3: Appointment created, ongoing:patient card submit">
+      <created>1660030261019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1660030261019</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -164,6 +171,7 @@
     <MESSAGE value="website v1.1: after setting up template" />
     <MESSAGE value="website v1.2: function start" />
     <MESSAGE value="aug 9 v1.2: Appointment created, ongoing:patient card creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="aug 9 v1.2: Appointment created, ongoing:patient card creation" />
+    <MESSAGE value="aug 9 v1.3: Appointment created, ongoing:patient card submit" />
+    <option name="LAST_COMMIT_MESSAGE" value="aug 9 v1.3: Appointment created, ongoing:patient card submit" />
   </component>
 </project>
