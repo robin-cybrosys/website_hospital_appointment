@@ -35,6 +35,37 @@ class WebsiteForm(http.Controller):
         return request.render(
             "website_hospital_appointment.appointment_creation_success", vals)
 
+        # create patient card if it's not existing
+    @http.route(['/appointment/card/create'], type='http', auth='public',
+                    website=True)
+    def create_card(self):
+        patient = request.env['res.partner'].sudo().search([])
+        # doctor_id = request.env['hr.employee'].sudo().search(
+        #     [('job_id', '=', 'Doctor')])
+        values = {}
+        values.update({
+            'patients': patient
+            # 'doctors': doctor_id
+        })
+        return request.render(
+            "website_hospital_appointment.card_creation_form", values)
+
+
+        # # patient = int(post['patient_id'])
+        # # print(patient, post)
+        # patient_card = request.env['res.partner'].sudo().create({
+        #     'patient_card_id': patient,
+        #     'name': post.get('name'),
+        #     'email': post.get('email'),
+        #     'phone': post.get('phone')
+        # })
+        # vals = {
+        #     'patient_cards': patient_card,
+        # }
+        # return request.render(
+        #     "website_hospital_appointment.customer_creation_success",
+        #     vals)
+
         # print(each,"laalalalaalaa")
 
         #     each.qty_sold = 0
