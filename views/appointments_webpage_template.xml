@@ -3,38 +3,27 @@
     <template id="online_appointment_form">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure oe_empty">
-                <section class="s_website_form" data-vcss="001"
-                         data-snippet="s_website_form">
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
                     <br/>
                     <div class="container">
                         <h2>Appointment Details</h2>
                         <br/>
-                        <form action="/appointment/submit" method="post"
-                              enctype="multipart/form-data"
-                              class="o_mark_required" data-mark="*"
-                              data-model_name="" data-success-page="">
-                            <input type="hidden" name="csrf_token"
-                                   t-att-value="request.csrf_token()"/>
+                        <form action="/appointment/submit" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="" data-success-page="">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
 
                             <div class="s_website_form_rows row s_col_no_bgcolor">
                                 <div>
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 150px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Patient Name :
                                                 </span>
 
                                             </label>
                                             <div class="col-sm">
-                                                <select name="patient_id"
-                                                        t-attf-class="form-control s_website_form_input"
-                                                        required="1">
-                                                    <t t-foreach="patients or []"
-                                                       t-as="patient_card">
+                                                <select name="patient_id" t-attf-class="form-control s_website_form_input" required="1">
+                                                    <t t-foreach="patients or []" t-as="patient_card">
                                                         <option t-att-value="patient_card.id">
                                                             <t t-esc="patient_card.patient_id.name"/>
                                                         </option>
@@ -44,23 +33,17 @@
                                         </div>
                                     </div>
                                     <br/>
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 150px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Doctor :
                                                 </span>
 
                                             </label>
                                             <div class="col-sm">
-                                                <select name="doctor_id"
-                                                        t-attf-class="form-control s_website_form_input"
-                                                        required="1">
-                                                    <t t-foreach="doctors or []"
-                                                       t-as="doctor">
+                                                <select name="doctor_id" t-attf-class="form-control s_website_form_input" required="1">
+                                                    <t t-foreach="doctors or []" t-as="doctor">
                                                         <option t-att-value="doctor.id">
                                                             <t t-esc="doctor.name"/>
                                                         </option>
@@ -70,54 +53,24 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--                                    <div class="form-group col-12 s_website_form_field s_website_form_required"-->
-                                <!--                                         data-type="char" data-name="Field">-->
-                                <!--                                        <div class="row s_col_no_resize s_col_no_bgcolor">-->
-                                <!--                                            <label class="col-form-label col-sm-auto s_website_form_label"-->
-                                <!--                                                   style="width: 200px"-->
-                                <!--                                                   for="studio1">-->
-                                <!--                                                <span class="s_website_form_label_content">-->
-                                <!--                                                    Phone :-->
-                                <!--                                                </span>-->
-                                <!--                                            </label>-->
-                                <!--                                            <div class="col-sm">-->
-                                <!--                                                <input id="phone" type="text"-->
-                                <!--                                                       class="form-control s_website_form_input"-->
-                                <!--                                                       name="phone"-->
-                                <!--                                                       required="1"/>-->
-                                <!--                                            </div>-->
-                                <!--                                        </div>-->
-                                <!--                                    </div>-->
-                                <!--                                </div>-->
-
                                 <div>
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 80px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 80px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Date :
                                                 </span>
                                             </label>
                                             <div class="col-sm">
-                                                <input id="appointment_date"
-                                                       type="date"
-                                                       class="form-control s_website_form_input"
-                                                       name="appointment_date"
-                                                />
+                                                <input id="appointment_date" type="date" required="1" class="form-control s_website_form_input" name="appointment_date" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group col-12 s_website_form_submit"
-                                     data-name="Submit Button">
-                                    <div style="width: 200px;"
-                                         class="s_website_form_label"/>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
                                     <br/>
-                                    <button type="submit"
-                                            class="btn btn-primary">Submit
+                                    <button type="submit" class="btn btn-primary">Submit
                                     </button>
                                 </div>
                                 <div class="form-group col-12 s_website_form_submit">
@@ -140,36 +93,25 @@
     <template id="card_creation_form">
         <t t-call="website.layout">
             <div id="wrap" class="oe_structure oe_empty">
-                <section class="s_website_form" data-vcss="001"
-                         data-snippet="s_website_form">
+                <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
                     <br/>
                     <div class="container">
                         <h2>Patient Details</h2>
                         <br/>
-                        <form action="/appointment/card/submit" method="post"
-                              enctype="multipart/form-data"
-                              class="o_mark_required" data-mark="*"
-                              data-model_name="" data-success-page="">
-                            <input type="hidden" name="csrf_token"
-                                   t-att-value="request.csrf_token()"/>
+                        <form action="/appointment/card/submit" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="" data-success-page="">
+                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
                             <div class="s_website_form_rows row s_col_no_bgcolor">
                                 <div>
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 150px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Patient Name :
                                                 </span>
                                             </label>
                                             <div class="col-sm">
-                                                <select name="partner_id"
-                                                        t-attf-class="form-control s_website_form_input"
-                                                        required="1">
-                                                    <t t-foreach="patients or []"
-                                                       t-as="patient">
+                                                <select name="partner_id" t-attf-class="form-control s_website_form_input" required="1">
+                                                    <t t-foreach="patients or []" t-as="patient">
                                                         <option t-att-value="patient.id">
                                                             <t t-esc="patient.name"/>
                                                         </option>
@@ -178,79 +120,49 @@
                                             </div>
                                         </div>
                                     </div>
-
-
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 150px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Phone :
                                                 </span>
-
                                             </label>
                                             <div class="col-sm">
-                                                <input id="phone" type="text"
-                                                       class="form-control s_website_form_input"
-                                                       name="phone"
-                                                       required="1"/>
+                                                <input id="phone" type="text" class="form-control s_website_form_input" name="phone" required="1"/>
                                             </div>
                                         </div>
                                     </div>
-
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 150px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 150px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     Email :
                                                 </span>
-
                                             </label>
                                             <div class="col-sm">
-                                                <input id="email" type="email"
-                                                       class="form-control s_website_form_input"
-                                                       name="email"
-                                                       required="1"/>
+                                                <input id="email" type="email" class="form-control s_website_form_input" name="email" required="1"/>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
                                 <div>
-                                    <div class="form-group col-12 s_website_form_field s_website_form_required"
-                                         data-type="char" data-name="Field">
+                                    <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
                                         <div class="row s_col_no_resize s_col_no_bgcolor">
-                                            <label class="col-form-label col-sm-auto s_website_form_label"
-                                                   style="width: 80px"
-                                                   for="studio1">
+                                            <label class="col-form-label col-sm-auto s_website_form_label" style="width: 80px" for="studio1">
                                                 <span class="s_website_form_label_content">
                                                     D O B :
                                                 </span>
                                             </label>
                                             <div class="col-sm">
-                                                <input id="dob"
-                                                       type="date"
-                                                       class="form-control s_website_form_input"
-                                                       name="date_of_birth"
-                                                />
+                                                <input id="dob" type="date" max='2022-08-09' required="1" class="form-control s_website_form_input" name="date_of_birth" />
                                             </div>
                                         </div>
                                     </div>
-
-
                                 </div>
-                                <div class="form-group col-12 s_website_form_submit"
-                                     data-name="Submit Button">
-                                    <div style="width: 200px;"
-                                         class="s_website_form_label"/>
+                                <div class="form-group col-12 s_website_form_submit" data-name="Submit Button">
+                                    <div style="width: 200px;" class="s_website_form_label"/>
                                     <br/>
-                                    <button type="submit"
-                                            class="btn btn-primary">Submit
+                                    <button type="submit" class="btn btn-primary">Submit
                                     </button>
                                 </div>
                                 <div class="form-group col-12 s_website_form_submit">
@@ -268,10 +180,7 @@
             </div>
         </t>
     </template>
-
-
-    <template id="appointment_creation_success"
-              name="Appointment Form Successfully Submitted">
+    <template id="appointment_creation_success" name="Appointment Form Successfully Submitted">
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="container">
@@ -280,13 +189,13 @@
                         <div class="alert alert-success">
                             Appointment created successfully.
                         </div>
+
                     </div>
                 </div>
             </div>
         </t>
     </template>
-    <template id="card_creation_success"
-              name="Card Successfully Submitted">
+    <template id="card_creation_success" name="Card Successfully Submitted">
         <t t-call="website.layout">
             <div id="wrap">
                 <div class="container">
