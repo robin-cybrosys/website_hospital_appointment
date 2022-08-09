@@ -5,12 +5,13 @@ from odoo.http import request
 class WebsiteForm(http.Controller):
     @http.route(['/appointment'], type='http', auth="public", website=True)
     def appointment(self):
-        patient = request.env['res.partner'].sudo().search([])
-        doctor = request.env['hr.employee'].sudo().search([('job_id', '=', 'Doctor')])
+        patient_card = request.env['hospital.management'].sudo().search([])
+        doctor_id = request.env['hr.employee'].sudo().search(
+            [('job_id', '=', 'Doctor')])
         values = {}
         values.update({
-            'patients': patient,
-            'doctors': doctor
+            'patients': patient_card,
+            'doctors': doctor_id
         })
         return request.render(
             "website_hospital_appointment.online_appointment_form", values)
@@ -19,19 +20,20 @@ class WebsiteForm(http.Controller):
     @http.route(['/appointment/submit'], type='http', auth='public',
                 website=True)
     def appointment_submit(self, **post):
-        patient_card_id = int(post['patient_id'])
-        doctor_id = int(post['doctor_id'])
-        print(patient_card_id,doctor_id)
-        # appointments = request.env['hospital.appointment'].sudo().create({
-        #     'patient_card_id': patient_card_id,
-        #     # 'patient_id': 'New',
-        #     'doctor_id': 21,
-        # })
-        # vals = {
-        #     'appointments': appointments,
-        # }
-        # return request.render(
-        #     "website_hospital_appointment.appointment_creation_success", vals)
+        patient = int(post['patient_id'])
+        doctor = int(post['doctor_id'])
+        print(patient, doctor,post)
+        appointments = request.env['hospital.appointment'].sudo().search([])
+        appointments.create({
+            # 'patient_id': patient,
+            'patient_card_id': patient,
+            'doctor_id': doctor,
+        })
+        vals = {
+            'appointments': appointments,
+        }
+        return request.render(
+            "website_hospital_appointment.appointment_creation_success", vals)
 
         # print(each,"laalalalaalaa")
 
