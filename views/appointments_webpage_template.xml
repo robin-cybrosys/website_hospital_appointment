@@ -8,7 +8,7 @@
                     <br/>
                     <br/>
                     <div class="container">
-                        <form action="/appointment_submit" method="post"
+                        <form action="/appointment/submit" method="post"
                               enctype="multipart/form-data"
                               class="o_mark_required" data-mark="*"
                               data-model_name="" data-success-page="">
@@ -25,9 +25,9 @@
                                                 <span class="s_website_form_label_content">
                                                     Patient Name :
                                                 </span>
-<!--                                                <span class="s_website_form_mark">-->
-<!--                                                    :-->
-<!--                                                </span>-->
+                                                <!--                                                <span class="s_website_form_mark">-->
+                                                <!--                                                    :-->
+                                                <!--                                                </span>-->
                                             </label>
                                             <div class="col-sm">
                                                 <select name="patient_id"
@@ -53,9 +53,9 @@
                                                 <span class="s_website_form_label_content">
                                                     Phone :
                                                 </span>
-<!--                                                <span class="s_website_form_mark">-->
-<!--                                                    -->
-<!--                                                </span>-->
+                                                <!--                                                <span class="s_website_form_mark">-->
+                                                <!--                                                    -->
+                                                <!--                                                </span>-->
                                             </label>
                                             <div class="col-sm">
                                                 <input id="phone" type="text"
@@ -75,16 +75,23 @@
                                                    style="width: 200px"
                                                    for="studio1">
                                                 <span class="s_website_form_label_content">
-                                                    Email :
+                                                    Doctor :
                                                 </span>
-<!--                                                <span class="s_website_form_mark">-->
+                                                <!--                                                <span class="s_website_form_mark">-->
 
-<!--                                                </span>-->
+                                                <!--                                                </span>-->
                                             </label>
                                             <div class="col-sm">
-                                                <input id="email" type="email"
-                                                       class="form-control s_website_form_input"
-                                                       name="email"/>
+                                                <select name="doctor_id"
+                                                        t-attf-class="form-control s_website_form_input"
+                                                        required="1">
+                                                    <t t-foreach="doctors or []"
+                                                       t-as="doctor">
+                                                        <option t-att-value="doctor.id">
+                                                            <t t-esc="doctor.name"/>
+                                                        </option>
+                                                    </t>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -98,9 +105,9 @@
                                                 <span class="s_website_form_label_content">
                                                     Date :
                                                 </span>
-<!--                                                <span class="s_website_form_mark">-->
+                                                <!--                                                <span class="s_website_form_mark">-->
 
-<!--                                                </span>-->
+                                                <!--                                                </span>-->
                                             </label>
                                             <div class="col-sm">
                                                 <input id="appointment_date"
@@ -127,6 +134,20 @@
                     <br/>
                     <br/>
                 </section>
+            </div>
+        </t>
+    </template>
+    <template id="appointment_creation_success"
+              name="Customer Form Successfully Submitted">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="alert alert-success">
+                            Customer created successfully.
+                        </div>
+                    </div>
+                </div>
             </div>
         </t>
     </template>

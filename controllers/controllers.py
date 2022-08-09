@@ -6,46 +6,33 @@ class WebsiteForm(http.Controller):
     @http.route(['/appointment'], type='http', auth="public", website=True)
     def appointment(self):
         patient = request.env['res.partner'].sudo().search([])
+        doctor = request.env['hr.employee'].sudo().search([('job_id', '=', 'Doctor')])
         values = {}
         values.update({
-            'patients': patient
+            'patients': patient,
+            'doctors': doctor
         })
         return request.render(
             "website_hospital_appointment.online_appointment_form", values)
 
-
-# class WebsiteAccount(http.Controller):
-#     @http.route(['/appointment_submit'], type='http', auth='public',
-#                 website=True)
-#     def appointment_submit(self, **post):
-        # patient_card = post['patient_id']
-        # print(patient_card)
-        # Put your backend operations here, e.g.
-        # appointments = request.env['hospital.appointment'].sudo().search([])
-        # appointments.create({
+    # class WebsiteAccount(http.Controller):
+    @http.route(['/appointment/submit'], type='http', auth='public',
+                website=True)
+    def appointment_submit(self, **post):
+        patient_card_id = int(post['patient_id'])
+        doctor_id = int(post['doctor_id'])
+        print(patient_card_id,doctor_id)
+        # appointments = request.env['hospital.appointment'].sudo().create({
+        #     'patient_card_id': patient_card_id,
+        #     # 'patient_id': 'New',
+        #     'doctor_id': 21,
         # })
-        #     'patient_card_id': post.get('patient_id'),
-            # 'patient_id': 'New',
-            # 'doctor_id': 21,
-            # patient_card = post['patient_id']
-            # print(patient_card)
-
-            # 'name': post.get('name'),
-            # 'email': post.get('email'),
-            # 'phone': post.get('phone')
         # vals = {
         #     'appointments': appointments,
         # }
-        # inherited the model to pass the values to the model from the form#
-        # return request.render(vals)
-        # finally send a request to render the thank you page#
-        # appointments.create({
-        #
-        #     'patient_card_id': self.browse(patient_card),
-        # 'patient_id': 'New',
-        #     'doctor_id': 21,
-        # 'team_id': cls.sales_team_1.id,
-        # })
+        # return request.render(
+        #     "website_hospital_appointment.appointment_creation_success", vals)
+
         # print(each,"laalalalaalaa")
 
         #     each.qty_sold = 0
