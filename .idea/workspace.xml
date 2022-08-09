@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="aug 9 v1.4: dob,form finishing ongoing:patient card submit">
-      <change afterPath="$PROJECT_DIR$/controllers/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/controllers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo/demo.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/website_hospital_appointment.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security/ir.model.access.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/appointments_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointments_page.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/appointments_webpage_template.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/appointments_webpage_template.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/templates.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/views.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="3867af73-04fd-41f1-a2f6-62ada7850141" name="Changes" comment="Aug:9:finalised task1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660037257181</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Aug:9:finalised task1">
+      <created>1660041809470</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1660041809470</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -192,6 +183,7 @@
     <MESSAGE value="aug 9 v1.2: Appointment created, ongoing:patient card creation" />
     <MESSAGE value="aug 9 v1.3: Appointment created, ongoing:patient card submit" />
     <MESSAGE value="aug 9 v1.4: dob,form finishing ongoing:patient card submit" />
-    <option name="LAST_COMMIT_MESSAGE" value="aug 9 v1.4: dob,form finishing ongoing:patient card submit" />
+    <MESSAGE value="Aug:9:finalised task1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aug:9:finalised task1" />
   </component>
 </project>
