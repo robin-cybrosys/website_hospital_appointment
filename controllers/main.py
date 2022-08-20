@@ -13,6 +13,7 @@ class WebsiteForm(http.Controller):
             'patients': patient_card,
             'doctors': doctor_id
         })
+        print(values,"valll")
         return request.render(
             "website_hospital_appointment.online_appointment_form", values)
 
