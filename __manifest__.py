@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "website_hospital_appointment",
+    'name': "Website Hospital Appointment",
     # 'application': "True",
     'summary': """
         Hospital Website
         """,
-    'author': "The R",
+    'author': "R",
     'website': "http://www.cybrosys.com",
     'sequence': "4",
     'licence': "LGPL-3",
